@@ -51,7 +51,7 @@
         this.$refs.loginFormRef.validate(valid => {
           if (!valid) return;
           this.$http.post('login', this.loginForm).then(res => {
-            console.log(res);
+            // console.log(res);
             if (res.data.meta.status !== 200) return this.$message.error('登录失败!')
             this.$message.success('登录成功!')
             window.sessionStorage.setItem('token',res.data.data.token)
