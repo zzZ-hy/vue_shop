@@ -24,7 +24,7 @@
           router
           :default-active="activePath">
           <!--     一级菜单     -->
-          <el-submenu :index="item.id+''" v-for="(item,index) in menulist" :key="item.id">
+          <el-submenu :index="item.id+''" v-for="(item) in menulist" :key="item.id">
             <!--      一级菜单的模板区域      -->
             <template slot="title">
               <!--       图标       -->
@@ -35,7 +35,7 @@
             <!--  二级菜单  -->
             <el-menu-item
               :index="'/'+subItem.path"
-              v-for="(subItem,index) in item.children"
+              v-for="(subItem) in item.children"
               :key="subItem.id"
               @click="saveNavState('/'+subItem.path)">
               <template slot="title">
