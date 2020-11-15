@@ -41,7 +41,7 @@
                   <el-col :span="18">
                     <el-tag type="warning"
                             closable
-                            v-for="(item3,index3) in item2.children"
+                            v-for="(item3) in item2.children"
                             :key="item3.id"
                             @close="removeRightById(scope.row,item3.id)">
                       {{item3.authName}}
@@ -323,7 +323,7 @@
           this.$message.success(res.data.meta.msg)
 
           this.getRolesList()
-          
+
           this.setRightDialogVisible = false
         })
       }
