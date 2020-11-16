@@ -320,7 +320,7 @@
         }).then(() => {
           return this.$http.delete('users/' + id)
         }).then(res => {
-          console.log(res);
+          // console.log(res);
           if (res.data.meta.status !== 200) return this.$message.error('删除用户失败！')
           this.$message.success(res.data.meta.msg)
           this.getUserList()
