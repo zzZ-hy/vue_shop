@@ -262,7 +262,7 @@
         }).then(() => {
           return this.$http.delete('roles/' + id)
         }).then(res => {
-          console.log(res);
+          // console.log(res);
           if (res.data.meta.status !== 200) return this.$message.error('删除角色失败！')
           this.$message.success(res.data.meta.msg)
           this.getRolesList()
@@ -294,7 +294,7 @@
         if (res.meta.status !== 200) return this.$message.error('获取权限数据失败!')
         //  保存权限数据
         this.rightsList = res.data
-        console.log(this.rightsList);
+        // console.log(this.rightsList);
 
         //  清空原有的数据
         // this.defKeys = []

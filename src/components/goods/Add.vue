@@ -222,7 +222,7 @@
             params: {sel: 'only'}
           }).then(res => {
             if (res.data.meta.status !== 200) return this.$message.error('获取静态属性列表失败!')
-            console.log(res.data.data);
+            // console.log(res.data.data);
             this.onlyTableData = res.data.data
           })
         }
@@ -258,7 +258,7 @@
       },
       //  添加商品按钮点击事件函数
       add() {
-        console.log(this.addForm);
+        // console.log(this.addForm);
         this.$refs.addFormRef.validate(valid => {
           if (!valid) return this.$message.error('请填写必要的表单项!')
 
@@ -284,7 +284,7 @@
             this.addForm.attrs.push(newInfo)
           })
           form.attrs = this.addForm.attrs
-          console.log(form);
+          // console.log(form);
 
           //  发起请求添加商品
           //  商品的名称必须是唯一的

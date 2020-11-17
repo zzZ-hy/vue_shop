@@ -312,7 +312,7 @@
             attr_name: this.editForm.attr_name,
             attr_sel: this.activeName
           }).then(res => {
-            console.log(res);
+            // console.log(res);
             if (res.data.meta.status !== 200) return this.$message.error('修改参数失败!')
             this.$message.success(res.data.meta.msg)
             this.getParamsData()

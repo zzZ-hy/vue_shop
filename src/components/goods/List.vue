@@ -85,7 +85,7 @@
           if (res.data.meta.status !== 200) return this.$message.error('获取商品列表失败!')
 
           this.$message.success(res.data.meta.msg)
-          console.log(res.data);
+          // console.log(res.data);
           this.goodsList = res.data.data.goods
           this.total = res.data.data.total
         })
