@@ -122,6 +122,9 @@
       display: flex;
       align-items: center;
 
+      img{
+        margin-left: 10px;
+      }
       span {
         margin-left: 10px;
       }

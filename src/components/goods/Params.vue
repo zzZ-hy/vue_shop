@@ -279,7 +279,7 @@
             attr_name: this.addForm.attr_name,
             attr_sel: this.activeName
           }).then(res => {
-            console.log(res);
+            // console.log(res);
             if (res.data.meta.status !== 201) return this.$message.error('添加参数失败!')
             this.$message.success(res.data.meta.msg)
             this.addDialogVisible = false
